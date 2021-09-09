@@ -1,0 +1,11 @@
+version: '3'
+services:
+  tcexam:
+    container_name: tcexam
+    build: ./
+    restart: always
+    ports:
+      - "5000:80"
+      - "3306:3306"
+    volumes:
+      - /home/git/tcexam:/opt/lampp/htdocs
